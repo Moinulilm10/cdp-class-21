@@ -13,7 +13,7 @@ exports.createContact = async (ctx) => {
     const newContact = await Portfolio.createContact({ name, email, message });
     console.log("Contact added successfully");
     ctx.status = 201;
-    ctx.body = { message: "Contact created successfully", newContact };
+    ctx.body = { message: "Contact message posted successfully", newContact };
   } catch (error) {
     console.error("Failed to add contact:", error);
     ctx.status = 500;
