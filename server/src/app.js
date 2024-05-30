@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const bodyParser = require("koa-bodyparser");
 const userRouter = require("./router/router");
 const Router = require("koa-router");
+const cors = require("@koa/cors");
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(bodyParser());
 
 router.use("", userRouter);
 
+app.use(cors());
 app.use(router.routes());
 app.use(router.allowedMethods());
 
