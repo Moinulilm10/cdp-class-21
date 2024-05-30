@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
+import ShowQuotes from "../Quotes/ShowQutoes";
 import Home2 from "./Home2";
 import Type from "./Type";
 
@@ -26,6 +27,10 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
+              </div>
+
+              <div style={{ padding: 50, textAlign: "left" }}>
+                <ShowQuotes />
               </div>
             </Col>
 
