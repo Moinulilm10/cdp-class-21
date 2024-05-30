@@ -12,12 +12,11 @@ const app = new Koa();
 const PORT = process.env.PORT;
 
 app.use(bodyParser());
-
-router.use("", userRouter);
-
 app.use(cors());
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+router.use("", userRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running ${PORT}`);
