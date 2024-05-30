@@ -612,10 +612,25 @@ button:focus {
 
 .experience-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 260px !important;
+  padding-left: 260px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+}
+
+@media (max-width: 767px) {
+  .experience-section {
+    padding-top: 190px !important;
+    padding-left: 0 !important;
+  }
+
+  .custom-style {
+    /* textAlign: "justify", textJustify: "inter-word" */
+    /* text-align: "justify";
+    text-justify: "inter-word"; */
+    overflow-wrap: normal;
+  }
 }
 
 /* --------- */
