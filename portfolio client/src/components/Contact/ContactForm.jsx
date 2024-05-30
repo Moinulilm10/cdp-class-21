@@ -1,6 +1,44 @@
+import axios from "axios";
+import { useState } from "react";
+
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // const URL = "http://localhost:3000/contact";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/contact`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (response.status === 201) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message");
+    }
+  };
+
   return (
-    <form className="flex flex-col justify-center p-6 ">
+    <form className="flex flex-col justify-center p-6 " onSubmit={handleSubmit}>
       <div className="flex flex-col">
         <label htmlFor="name" className="hidden">
           Full Name
@@ -10,6 +48,8 @@ const ContactForm = () => {
           name="name"
           id="name"
           placeholder="your full name"
+          value={formData.name}
+          onChange={handleChange}
           className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
       </div>
@@ -23,6 +63,8 @@ const ContactForm = () => {
           name="email"
           id="email"
           placeholder="your email"
+          value={formData.email}
+          onChange={handleChange}
           className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
       </div>
@@ -36,6 +78,8 @@ const ContactForm = () => {
           name="message"
           id="message"
           placeholder="message"
+          value={formData.message}
+          onChange={handleChange}
           className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
       </div>
