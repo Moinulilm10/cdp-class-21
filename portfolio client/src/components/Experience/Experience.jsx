@@ -29,11 +29,11 @@ const Experience = () => {
             {/* vertical line */}
             <div
               style={{ height: "174px", width: "682px" }}
-              className="p-0 pr-24 space-y-5"
+              className="p-0 pr-24 "
             >
               <ul
                 style={{ textAlign: "justify", textJustify: "inter-word" }}
-                className="flex flex-col items-start justify-start pl-5 overflow-auto list-disc custom-style lg:overflow-hidden"
+                className="pl-5 whitespace-normal list-disc text-ellipsis"
               >
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -74,11 +74,11 @@ const Experience = () => {
             {/* vertical line */}
             <div
               style={{ height: "174px", width: "682px" }}
-              className="p-0 pr-24 space-y-3.5"
+              className="p-0 pr-24"
             >
               <ul
                 style={{ textAlign: "justify", textJustify: "inter-word" }}
-                className="flex flex-col items-start justify-start pl-5 overflow-auto list-disc custom-style lg:overflow-hidden"
+                className="pl-5 list-disc custom-style"
               >
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.

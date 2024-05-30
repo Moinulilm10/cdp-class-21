@@ -622,14 +622,7 @@ button:focus {
 @media (max-width: 767px) {
   .experience-section {
     padding-top: 190px !important;
-    padding-left: 0 !important;
-  }
-
-  .custom-style {
-    /* textAlign: "justify", textJustify: "inter-word" */
-    /* text-align: "justify";
-    text-justify: "inter-word"; */
-    overflow-wrap: normal;
+    padding-left: 275px !important;
   }
 }
 
