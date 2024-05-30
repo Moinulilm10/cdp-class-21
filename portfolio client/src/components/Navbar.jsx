@@ -10,6 +10,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import { MdOutlineWork } from "react-icons/md";
 import { RiContactsLine } from "react-icons/ri";
+import { VscFeedback } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import logo from "../assets/my-logo.png";
 
@@ -115,6 +116,20 @@ function NavBar() {
                   // style={{ marginBottom: "2px" }}
                 />{" "}
                 Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                to="/testimonial"
+                as={Link}
+                onClick={() => updateExpanded(false)}
+              >
+                <VscFeedback
+                  className="mb-[-27px] md:mb-[2px] lg:mb-[2px]"
+                  // style={{ marginBottom: "2px" }}
+                />{" "}
+                Testimonial
               </Nav.Link>
             </Nav.Item>
 

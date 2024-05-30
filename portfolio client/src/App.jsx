@@ -18,6 +18,7 @@ import Preloader from "./components/Preloader";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 import ScrollToTop from "./components/ScrollToTop";
+import TestimonialWrapper from "./components/Testimonial/TestomonialWrapper";
 import "./styles/style.css";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/testimonial" element={<TestimonialWrapper />} />
           <Route path="/users" element={<GetUser />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
